@@ -1,3 +1,4 @@
-[Wed Jun 08 16:07:39 2011] [warn] RSA server certificate wildcard CommonName (CN) `*.fc.dev' does NOT match server name!?
-[Wed Jun 08 16:07:39 2011] [warn] RSA server certificate wildcard CommonName (CN) `*.fc.dev' does NOT match server name!?
-[Wed Jun 08 16:07:56 2011] [error] [client 127.0.0.1] File does not exist: /home/jesse/Projects/ACES/docroot/favicon.ico
+[Thu Jun 09 11:42:07 2011] [warn] RSA server certificate wildcard CommonName (CN) `*.fc.dev' does NOT match server name!?
+[Thu Jun 09 11:42:08 2011] [warn] RSA server certificate wildcard CommonName (CN) `*.fc.dev' does NOT match server name!?
+[Thu Jun 09 11:47:41 2011] [warn] RSA server certificate wildcard CommonName (CN) `*.fc.dev' does NOT match server name!?
+[Thu Jun 09 11:47:41 2011] [warn] RSA server certificate wildcard CommonName (CN) `*.fc.dev' does NOT match server name!?
