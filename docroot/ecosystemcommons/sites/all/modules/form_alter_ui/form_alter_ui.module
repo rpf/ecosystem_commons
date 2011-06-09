@@ -1,0 +1,218 @@
+<?php
+/**
+ * @file form_alter_ui.module
+ * TODO: Enter file description here.
+ */
+
+
+define('form_alter_ui_DEFAULT_VALUE', '[NOCHANGE]');
+
+
+
+/**
+ * Implementation of hook_perm().
+ */
+function form_alter_ui_perm() {
+  return array('administer form alter ui', 'use PHP for form alter');
+}
+
+/**
+ * Implementation of hook_menu().
+ */
+function form_alter_ui_menu() {
+  $items = array();
+
+  $items['admin/settings/form_alter'] = array(
+    'title' => 'Form Alter',
+    'description' => 'Customize site forms.',
+    'page callback' => 'drupal_get_form',
+    'page arguments' => array('form_alter_ui_settings'),
+    'access arguments' => array('administer form alter ui'),
+    'file' => 'form_alter_ui.admin.inc',
+  );
+  $items['admin/settings/form_alter/settings'] = array(
+    'title' => 'Settings',
+    'type' => MENU_DEFAULT_LOCAL_TASK,
+    'weight' => -10,
+  );
+  $items['admin/settings/form_alter/import'] = array(
+    'title' => 'Import',
+    'page callback' => 'drupal_get_form',
+    'page arguments' => array('form_alter_ui_import_form'),
+    'type' => MENU_LOCAL_TASK,
+    'access arguments' => array('administer form alter ui'),
+    // 'parent' => 'admin/settings/form_alter',
+    'weight' => 1,
+    'file' => 'form_alter_ui.admin.inc',
+  );
+  $items['admin/settings/form_alter/export'] = array(
+    'title' => 'Export',
+    'page callback' => 'drupal_get_form',
+    'page arguments' => array('form_alter_ui_export_form'),
+    'type' => MENU_LOCAL_TASK,
+    'access arguments' => array('administer form alter ui'),
+    // 'parent' => 'admin/settings/form_alter',
+    'weight' => 2,
+    'file' => 'form_alter_ui.admin.inc',
+  );
+  $items['admin/settings/form_alter/alter'] = array(
+    'title' => 'Alter',
+    'page callback' => 'drupal_get_form',
+    'page arguments' => array('form_alter_ui_alter_form'),
+    'type' => MENU_CALLBACK,
+    'access arguments' => array('administer form alter ui'),
+    // 'parent' => 'admin/settings/formalter',
+    // 'weight' => 1,
+    'file' => 'form_alter_ui.admin.inc',
+  );
+  return $items;
+}
+
+/**
+ * Load form + alteration information for a single form.
+ */
+function form_alter_ui_load_alteration($form_id) {
+  $result = db_query("SELECT * FROM {form_alter_ui_log} WHERE form_id = '%s'", $form_id);
+  if ($row = db_fetch_object($result)) {
+    $row->form = unserialize($row->form); // TODO: check for null/empty
+    $row->alterations = unserialize($row->alterations); // TODO: check for null/empty
+  }
+  return $row;
+}
+
+/**
+ * Save or update a form definition in the log.
+ */
+function form_alter_ui_save_form($form_id, $form) {
+  global $user, $base_root;
+  $row = array(
+    'uid' => $user->uid,
+    'location' => $base_root . request_uri(),
+    'form_id' => $form_id,
+    'form' => serialize($form),
+    'timestamp' => time(),
+  );
+
+  // Save or update the form log
+  $result = @drupal_write_record('form_alter_ui_log', $row);
+  if ($result == FALSE) {
+    $result = drupal_write_record('form_alter_ui_log', $row, 'form_id');
+  }
+  return $result;
+}
+
+/**
+ * Update the alterations for a given form.
+ */
+function form_alter_ui_save_alteration($form_id, $alterations = NULL) {
+  $row = array(
+    'form_id' => $form_id,
+    'alterations' => serialize($alterations),
+  );
+
+  return drupal_write_record('form_alter_ui_log', $row, 'form_id');
+}
+
+/**
+ * Get the list of alterations that can per performed to a subject form.
+ * This is used both to create the alteration form, and at runtime, to determine
+ * which modifications can be performed.
+ * @return array The list of form elements that can be used to modify EACH form
+ *  element in the subject form.
+ */
+function _form_alter_ui_get_elements() {
+  // If #name is set, only apply this to form elements called 'name'.
+  // If #fortype is set, only apply this to form elements of type #fortype
+  return array(
+    'type' => array(
+      '#title' => t('Type'),
+      '#type' => 'textfield',
+    ),
+    'title' => array(
+      '#title' => t('Title'),
+      '#type' => 'textfield',
+    ),
+    'description' => array(
+      '#title' => t('Description'),
+      '#type' => 'textfield',
+    ),
+    'weight' => array(
+      '#title' => t('Weight'),
+      '#type' => 'textfield',
+    ),
+  );
+}
+
+/**
+ * Implementation of hook_form_alter().
+ */
+function form_alter_ui_form_alter(&$form, $form_state, $form_id) {
+  // Don't log/modify ourselves - too confusing!
+  if (strncmp($form_id, 'form_alter_ui_', 14) === 0) {
+    return;
+  }
+
+  // If form logging is enabled, save $form to the database.
+  if (variable_get('form_alter_ui_enable', FALSE) && user_access('administer form alter ui')) {
+    drupal_set_message(t('Saved details for form: %form', array('%form' => $form_id)));
+    form_alter_ui_save_form($form_id, $form);
+  }
+
+  // Modify the form per current configuration
+  $alterations = form_alter_ui_load_alteration($form_id);
+  if ($alterations == FALSE || $alterations->alterations == FALSE) {
+    return;
+  }
+
+  $form_alterations = $alterations->alterations;
+
+  // Apply form level modifications
+  if ($form_alterations['form']) {
+    // PHP
+    if (isset($form_alterations['form']['php'])) {
+      ob_start();
+      print eval($form_alterations['form']['php']);
+      $output = ob_get_contents();
+      ob_end_clean();
+    }
+  }
+
+
+  // Apply form-element level modifications
+  foreach ($form as $key => &$element) {
+    if ($key[0] == '#' || !array_key_exists($key, $form_alterations)) {
+      continue;
+    }
+
+    $element_alterations = $form_alterations[$key];
+
+    // TODO: loop through the simple value-set attributes
+    // $simple_keys = array('title', 'description');
+    foreach (array_keys(_form_alter_ui_get_elements()) as $akey) {
+      if (isset($element_alterations[$akey]) && $element_alterations[$akey] != form_alter_ui_DEFAULT_VALUE) {
+        // dsm("Updating $key.#$akey to $element_alterations[$akey]");
+        $element['#'. $akey] = $element_alterations[$akey];
+      }
+    }
+
+    // PHP
+    if ($element_alterations['php']) {
+      ob_start();
+      print eval($element_alterations['php']);
+      $output = ob_get_contents();
+      ob_end_clean();
+    }
+  }
+}
+
+function form_alter_ui_help($path, $arg) {
+  // dsm("form_alter_ui_help($path, $arg)");
+  switch ($path) {
+    case 'admin/settings/form_alter':
+      return
+        '<p>'. t('To start using this module, enable the checkbox at the top: this allows Form Alter UI to "record" forms as they are used on the site. Next, browse to a page that contains the form you want to alter - this will cause the form and its data to be recorded in the database. Now, come back to this page and you will see a log of forms recorded, ordered by the last-access date.') .'</p>'.
+        '<p>'. t('Click on "modify" next to the form you are interested in, and you will be presented with the "form alteration screen". The page contains a number of collapsed sections, one per field (or fieldset). Scroll down to the field you want to modify, and expand the region.') .'</p>'.
+        '<p>'. t('Within that region, there are some controls that allow you to modify basic form-element settings (eg: Title, Description, etc). Over time, we expect to add more "nice editors" for different attributes of the element. There is also a textarea where you can enter PHP code for modifying that element. During execution of this PHP code, you should modify $element, and this will be reflected in the form.') .'</p>';
+
+  }
+}

@@ -1,0 +1,1 @@
+﻿name, description, synonymsFederal Government,,State Government,,Local Government,,Non-profit Organization,,Academic,,Business/Industry

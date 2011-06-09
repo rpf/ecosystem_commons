@@ -1,0 +1,119 @@
+<?php
+/**
+ * @file form_alter_ui.install
+ * TODO: Enter file description here.
+ */
+
+/**
+ * Implementation of hook_schema().
+ */
+function form_alter_ui_schema() {
+  // TODO: rename form_alter_ui_log to form_alter_ui_forms
+  $schema['form_alter_ui_log'] = array(
+    'description' => 'Table that contains logs of all forms seen on the site.',
+    'fields' => array(
+      'uid' => array(
+        'type' => 'int',
+        'not null' => TRUE,
+        'default' => 0,
+        'description' => 'The {users}.uid of the user who triggered the event.',
+      ),
+      'location'  => array(
+        'type' => 'text',
+        'not null' => TRUE,
+        'description' => 'URL of the origin of the event.',
+      ),
+      'form_id' => array(
+        'type' => 'varchar',
+        'length' => 128,
+        'not null' => TRUE,
+        'default' => '',
+        'description' => 'The ID of the form.',
+      ),
+      'form' => array(
+        'type' => 'text',
+        'size' => 'medium',
+        'not null' => TRUE,
+        'description' => 'Serialized form data.',
+      ),
+      'timestamp' => array(
+        'type' => 'int',
+        'not null' => TRUE,
+        'default' => 0,
+        'description' => 'Unix timestamp of when event occurred.',
+      ),
+      'alterations' => array(
+        'type' => 'text',
+        'size' => 'medium',
+        'not null' => FALSE,
+        // 'default' => '',
+        'description' => 'Serialized configuration for updating this form.',
+      ),
+    ),
+
+    'primary key' => array('form_id'),
+  );
+
+  return $schema;
+}
+
+/**
+ * Add the "alterations" field to the table.
+ */
+function form_alter_ui_update_6001() {
+  $ret = array();
+  $attributes = array(
+    'not null' => FALSE,
+    'description' => 'Serialized configuration for updating this form.',
+  );
+  db_add_column($ret, 'form_alter_ui_log', 'alterations', 'text', $attributes);
+  db_change_column($ret, $table, $column, $column_new, $type, $attributes);
+  return $ret;
+}
+
+/**
+ * Modify the "form" and "alterations" fields to medium text (some forms are
+ * over 64KB - the limit for TEXT fields).
+ */
+function form_alter_ui_update_6002() {
+  $ret = array();
+
+  // Update the "form" field, after removing any truncated entries
+  $ret[] = update_sql('DELETE FROM {form_alter_ui_log} WHERE LENGTH(form) = 65535');
+  $spec = array(
+    'type' => 'text',
+    'size' => 'medium',
+    'not null' => TRUE,
+    'description' => 'Serialized form data.',
+  );
+  db_change_field($ret, 'form_alter_ui_log', 'form', 'form', $spec);
+
+
+  // Update the "alterations" field, after removing any truncated entries
+  $ret[] = update_sql('DELETE FROM {form_alter_ui_log} WHERE LENGTH(alterations) = 65535');
+  $spec = array(
+    'type' => 'text',
+    'size' => 'medium',
+    'not null' => FALSE,
+    'description' => 'Serialized configuration for updating this form.',
+  );
+  db_change_field($ret, 'form_alter_ui_log', 'alterations', 'alterations', $spec);
+
+  return $ret;
+}
+
+
+/**
+ * Implementation of hook_install().
+ */
+function form_alter_ui_install() {
+  drupal_install_schema('form_alter_ui');
+}
+
+
+/**
+ * Implementation of hook_uninstall().
+ */
+function form_alter_ui_uninstall() {
+  drupal_uninstall_schema('form_alter_ui');
+}

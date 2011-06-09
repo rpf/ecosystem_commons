@@ -1,0 +1,518 @@
+ Package     Name                                Type    Status         Version 
+ Acquia      Acquia agent (acquia_agent)         Module  Not installed  6.x-1.1 
+ Network                                                                0       
+ Connector                                                                      
+ Acquia      Acquia search (acquia_search)       Module  Not installed  6.x-1.5 
+ Network                                                                288     
+ Connector                                                                      
+ Acquia      Acquia site information             Module  Not installed  6.x-1.1 
+ Network     (acquia_spi)                                               0       
+ Connector                                                                      
+ Administra  Actions permissions                 Module  Not installed  6.x-1.1 
+ tion        (actions_permissions)                                      0       
+ Administra  Administration menu (admin_menu)    Module  Enabled        6.x-1.6 
+ tion                                                                           
+ Apache      Apache Solr framework (apachesolr)  Module  Not installed  6.x-1.2 
+ Solr                                                                           
+ Apache      Apache Solr image module            Module  Not installed  6.x-1.2 
+ Solr        integration (apachesolr_image)                                     
+ Apache      Apache Solr node access             Module  Not installed  6.x-1.2 
+ Solr        (apachesolr_nodeaccess)                                            
+ Apache      Apache Solr Organic Groups          Module  Not installed  6.x-1.2 
+ Solr        (apachesolr_og)                                                    
+ Apache      Apache Solr search                  Module  Not installed  6.x-1.2 
+ Solr        (apachesolr_search)                                                
+ CCK         Content (content)                   Module  Enabled        6.x-2.9 
+ CCK         Content Copy (content_copy)         Module  Not installed  6.x-2.9 
+ CCK         Content Permissions                 Module  Enabled        6.x-2.9 
+             (content_permissions)                                              
+ CCK         Editablefields (editablefields)     Module  Enabled        6.x-2.0 
+ CCK         Fieldgroup (fieldgroup)             Module  Enabled        6.x-2.9 
+ CCK         FileField (filefield)               Module  Enabled        6.x-3.9 
+ CCK         FileField Meta (filefield_meta)     Module  Enabled        6.x-3.9 
+ CCK         ImageField (imagefield)             Module  Enabled        6.x-3.9 
+ CCK         Link (link)                         Module  Enabled        6.x-2.9 
+ CCK         Location CCK (location_cck)         Module  Disabled       6.x-3.1 
+ CCK         Node Reference (nodereference)      Module  Enabled        6.x-2.9 
+ CCK         Number (number)                     Module  Enabled        6.x-2.9 
+ CCK         Option Widgets (optionwidgets)      Module  Enabled        6.x-2.9 
+ CCK         Text (text)                         Module  Enabled        6.x-2.9 
+ CCK         User Reference (userreference)      Module  Enabled        6.x-2.9 
+ Chaos tool  Bulk Export (bulk_export)           Module  Not installed  6.x-1.8 
+ suite                                                                          
+ Chaos tool  Chaos tools (ctools)                Module  Enabled        6.x-1.8 
+ suite                                                                          
+ Chaos tool  Chaos Tools (CTools) AJAX Example   Module  Not installed  6.x-1.8 
+ suite       (ctools_ajax_sample)                                               
+ Chaos tool  Chaos Tools (CTools) Plugin         Module  Not installed  6.x-1.8 
+ suite       Example (ctools_plugin_example)                                    
+ Chaos tool  Custom content panes                Module  Not installed  6.x-1.8 
+ suite       (ctools_custom_content)                                            
+ Chaos tool  Custom rulesets                     Module  Not installed  6.x-1.8 
+ suite       (ctools_access_ruleset)                                            
+ Chaos tool  Page manager (page_manager)         Module  Enabled        6.x-1.8 
+ suite                                                                          
+ Chaos tool  Stylizer (stylizer)                 Module  Not installed  6.x-1.8 
+ suite                                                                          
+ Chaos tool  Views content panes                 Module  Enabled        6.x-1.8 
+ suite       (views_content)                                                    
+ Charting    Chart API (chart)                   Module  Enabled        6.x-1.3 
+ Charting    Chart API Views Integration         Module  Not installed  6.x-1.3 
+             (chart_views)                                                      
+ Charting    Drupal System Charting              Module  Not installed  6.x-1.3 
+             (system_charts)                                                    
+ Context     Context (context)                   Module  Enabled        6.x-3.0 
+ Context     Context layouts (context_layouts)   Module  Not installed  6.x-3.0 
+ Context     Context OG (context_og)             Module  Enabled        6.x-3.0 
+ Context     Context UI (context_ui)             Module  Enabled        6.x-3.0 
+ Core -      Aggregator (aggregator)             Module  Enabled        6.20    
+ optional                                                                       
+ Core -      Blog (blog)                         Module  Enabled        6.20    
+ optional                                                                       
+ Core -      Blog API (blogapi)                  Module  Not installed  6.20    
+ optional                                                                       
+ Core -      Book (book)                         Module  Not installed  6.20    
+ optional                                                                       
+ Core -      Color (color)                       Module  Enabled        6.20    
+ optional                                                                       
+ Core -      Comment (comment)                   Module  Enabled        6.20    
+ optional                                                                       
+ Core -      Contact (contact)                   Module  Enabled        6.20    
+ optional                                                                       
+ Core -      Content translation (translation)   Module  Not installed  6.20    
+ optional                                                                       
+ Core -      Database logging (dblog)            Module  Enabled        6.20    
+ optional                                                                       
+ Core -      Forum (forum)                       Module  Not installed  6.20    
+ optional                                                                       
+ Core -      Help (help)                         Module  Enabled        6.20    
+ optional                                                                       
+ Core -      Locale (locale)                     Module  Not installed  6.20    
+ optional                                                                       
+ Core -      Menu (menu)                         Module  Enabled        6.20    
+ optional                                                                       
+ Core -      OpenID (openid)                     Module  Disabled       6.20    
+ optional                                                                       
+ Core -      Path (path)                         Module  Enabled        6.20    
+ optional                                                                       
+ Core -      PHP filter (php)                    Module  Enabled        6.20    
+ optional                                                                       
+ Core -      Ping (ping)                         Module  Not installed  6.20    
+ optional                                                                       
+ Core -      Poll (poll)                         Module  Enabled        6.20    
+ optional                                                                       
+ Core -      Profile (profile)                   Module  Enabled        6.20    
+ optional                                                                       
+ Core -      Search (search)                     Module  Enabled        6.20    
+ optional                                                                       
+ Core -      Statistics (statistics)             Module  Not installed  6.20    
+ optional                                                                       
+ Core -      Syslog (syslog)                     Module  Not installed  6.20    
+ optional                                                                       
+ Core -      Taxonomy (taxonomy)                 Module  Enabled        6.20    
+ optional                                                                       
+ Core -      Throttle (throttle)                 Module  Not installed  6.20    
+ optional                                                                       
+ Core -      Tracker (tracker)                   Module  Enabled        6.20    
+ optional                                                                       
+ Core -      Trigger (trigger)                   Module  Enabled        6.20    
+ optional                                                                       
+ Core -      Update status (update)              Module  Enabled        6.20    
+ optional                                                                       
+ Core -      Upload (upload)                     Module  Not installed  6.20    
+ optional                                                                       
+ Core -      Block (block)                       Module  Enabled        6.20    
+ required                                                                       
+ Core -      Filter (filter)                     Module  Enabled        6.20    
+ required                                                                       
+ Core -      Node (node)                         Module  Enabled        6.20    
+ required                                                                       
+ Core -      System (system)                     Module  Enabled        6.20    
+ required                                                                       
+ Core -      User (user)                         Module  Enabled        6.20    
+ required                                                                       
+ Date/Time   Calendar (calendar)                 Module  Enabled        6.x-2.4 
+ Date/Time   Calendar iCal (calendar_ical)       Module  Not installed  6.x-2.4 
+ Date/Time   Calendar Multiday                   Module  Not installed  6.x-2.4 
+             (calendar_multiday)                                                
+ Date/Time   Calendar Popup (jcalendar)          Module  Enabled        6.x-2.4 
+ Date/Time   Date (date)                         Module  Enabled        6.x-2.7 
+ Date/Time   Date API (date_api)                 Module  Enabled        6.x-2.7 
+ Date/Time   Date Locale (date_locale)           Module  Not installed  6.x-2.7 
+ Date/Time   Date PHP4 (date_php4)               Module  Not installed  6.x-2.7 
+ Date/Time   Date Popup (date_popup)             Module  Enabled        6.x-2.7 
+ Date/Time   Date Repeat API (date_repeat)       Module  Not installed  6.x-2.7 
+ Date/Time   Date Timezone (date_timezone)       Module  Enabled        6.x-2.7 
+ Date/Time   Date Tools (date_tools)             Module  Enabled        6.x-2.7 
+ Developmen  Devel (devel)                       Module  Disabled       6.x-1.2 
+ t                                                                      3       
+ Developmen  Devel generate (devel_generate)     Module  Not installed  6.x-1.2 
+ t                                                                      3       
+ Developmen  Devel node access                   Module  Not installed  6.x-1.2 
+ t           (devel_node_access)                                        3       
+ Developmen  Feedback (feedback)                 Module  Disabled       6.x-2.1 
+ t                                                                              
+ Developmen  Location Generate                   Module  Not installed  6.x-3.1 
+ t           (location_generate)                                                
+ Developmen  Messaging debug (messaging_debug)   Module  Not installed  6.x-2.4 
+ t                                                                              
+ Developmen  Performance Logging (performance)   Module  Not installed  6.x-1.2 
+ t                                                                      3       
+ Developmen  Theme developer (devel_themer)      Module  Disabled       6.x-1.x 
+ t                                                                      -dev    
+ Drupal      Drupal Wiki taggin suggestions      Module  Not installed  6.x-2.5 
+ Wiki        (drupalwiki_tagging_suggest)                                       
+ Drupal      Tagging (tagging)                   Module  Disabled       6.x-2.5 
+ Wiki                                                                           
+ Features    Acquia Network Subscription         Module  Not installed          
+             (acquia_network_subscription)                                      
+ Features    Commons Admin (commons_admin)       Module  Enabled                
+ Features    Commons Blog (commons_blog)         Module  Disabled               
+ Features    Commons Core (commons_core)         Module  Enabled                
+ Features    Commons Dashboard                   Module  Enabled                
+             (commons_dashboard)                                                
+ Features    Commons Discussion                  Module  Enabled                
+             (commons_discussion)                                               
+ Features    Commons Document                    Module  Enabled                
+             (commons_document)                                                 
+ Features    Commons Event (commons_event)       Module  Enabled                
+ Features    Commons Group Aggregator            Module  Enabled                
+             (commons_group_aggregator)                                         
+ Features    Commons Home (commons_home)         Module  Enabled                
+ Features    Commons Notifications               Module  Enabled                
+             (commons_notifications)                                            
+ Features    Commons Poll (commons_poll)         Module  Enabled                
+ Features    Commons Reputation                  Module  Not installed          
+             (commons_reputation)                                               
+ Features    Commons SEO (commons_seo)           Module  Enabled                
+ Features    Commons Wiki (commons_wiki)         Module  Enabled                
+ Features    Features (features)                 Module  Enabled        6.x-1.0 
+ Feeds       Feeds (feeds)                       Module  Enabled        6.x-1.0 
+                                                                        -beta10 
+ Feeds       Feeds Admin UI (feeds_ui)           Module  Enabled        6.x-1.0 
+                                                                        -beta10 
+ Feeds       Feeds Fast News (feeds_fast_news)   Module  Not installed  6.x-1.0 
+                                                                        -beta10 
+ Feeds       Feeds Import (feeds_import)         Module  Enabled        6.x-1.0 
+                                                                        -beta10 
+ Feeds       Feeds News (feeds_news)             Module  Enabled        6.x-1.0 
+                                                                        -beta10 
+ Feeds       Location Feeds (location_feeds)     Module  Disabled       6.x-1.3 
+ Flags       Flag (flag)                         Module  Enabled        6.x-1.3 
+ Flags       Flag actions (flag_actions)         Module  Not installed  6.x-1.3 
+ Heartbeat   Flag heartbeat (flag_heartbeat)     Module  Enabled        6.x-4.1 
+                                                                        1       
+ Heartbeat   friendlist activity                 Module  Enabled        6.x-4.1 
+             (friendlist_activity)                                      1       
+ Heartbeat   Heartbeat activity (heartbeat)      Module  Enabled        6.x-4.1 
+                                                                        1       
+ Heartbeat   Heartbeat comments                  Module  Not installed  6.x-4.1 
+             (heartbeat_comments)                                       1       
+ Heartbeat   Heartbeat displays (hds)            Module  Not installed  6.x-4.1 
+                                                                        1       
+ Heartbeat   Heartbeat example module            Module  Not installed  6.x-4.1 
+             (heartbeat_example)                                        1       
+ Heartbeat   Heartbeat rules (hrules)            Module  Enabled        6.x-4.1 
+                                                                        1       
+ Heartbeat   Heartbeat test helper               Module  Not installed  6.x-4.1 
+             (heartbeattest)                                            1       
+ Heartbeat   Heartbeat views (heartbeat_views)   Module  Enabled        6.x-4.1 
+                                                                        1       
+ Heartbeat   organic group activity              Module  Enabled        6.x-4.1 
+             (og_activity)                                              1       
+ Heartbeat   Shouts (shouts)                     Module  Not installed  6.x-4.1 
+                                                                        1       
+ Homebox     Homebox (homebox)                   Module  Enabled        6.x-2.1 
+ Homebox     Homebox example (homebox_example)   Module  Not installed  6.x-2.1 
+ Homebox     Homebox OG (homebox_og)             Module  Not installed  6.x-2.1 
+ Image       Image (image)                       Module  Not installed  6.x-1.1 
+ Image       Image Attach (image_attach)         Module  Not installed  6.x-1.1 
+ Image       Image Gallery (image_gallery)       Module  Not installed  6.x-1.1 
+ Image       Image Import (image_import)         Module  Not installed  6.x-1.1 
+ Image       ImageMagick Advanced Options        Module  Not installed  6.x-1.1 
+             (image_im_advanced)                                                
+ ImageCache  ImageAPI (imageapi)                 Module  Enabled        6.x-1.9 
+ ImageCache  ImageAPI GD2 (imageapi_gd)          Module  Enabled        6.x-1.9 
+ ImageCache  ImageAPI ImageMagick                Module  Not installed  6.x-1.9 
+             (imageapi_imagemagick)                                             
+ ImageCache  ImageCache (imagecache)             Module  Enabled        6.x-2.0 
+                                                                        -beta10 
+ ImageCache  Imagecache Autorotate               Module  Not installed  6.x-1.8 
+             (imagecache_autorotate)                                            
+ ImageCache  Imagecache Canvas Actions           Module  Enabled        6.x-1.8 
+             (imagecache_canvasactions)                                         
+ ImageCache  Imagecache Color Actions            Module  Not installed  6.x-1.8 
+             (imagecache_coloractions)                                          
+ ImageCache  Imagecache Custom Actions           Module  Not installed  6.x-1.8 
+             (imagecache_customactions)                                         
+ ImageCache  Imagecache Profile Pictures         Module  Enabled        6.x-1.3 
+             (imagecache_profiles)                                              
+ ImageCache  Imagecache Text Actions             Module  Not installed  6.x-1.8 
+             (imagecache_textactions)                                           
+ ImageCache  ImageCache UI (imagecache_ui)       Module  Enabled        6.x-2.0 
+                                                                        -beta10 
+ Input       Freelinking (freelinking)           Module  Enabled        6.x-1.1 
+ filters                                                                0       
+ Input       WYSIWYG Filter (wysiwyg_filter)     Module  Enabled        6.x-1.5 
+ filters                                                                        
+ Location    GMap (gmap)                         Module  Enabled        6.x-1.1 
+ Location    GMap Location (gmap_location)       Module  Enabled        6.x-1.1 
+ Location    GMap Macro Builder                  Module  Enabled        6.x-1.1 
+             (gmap_macro_builder)                                               
+ Location    GMap Taxonomy Markers               Module  Enabled        6.x-1.1 
+             (gmap_taxonomy)                                                    
+ Location    Location (location)                 Module  Enabled        6.x-3.1 
+ Location    Location Add Another                Module  Enabled        6.x-3.1 
+             (location_addanother)                                              
+ Location    Location Fax (location_fax)         Module  Not installed  6.x-3.1 
+ Location    Location Phone (location_phone)     Module  Not installed  6.x-3.1 
+ Location    Location Search (location_search)   Module  Enabled        6.x-3.1 
+ Location    Location Taxonomy                   Module  Not installed  6.x-3.1 
+             (location_taxonomy)                                                
+ Location    Node Locations (location_node)      Module  Enabled        6.x-3.1 
+ Location    User Locations (location_user)      Module  Enabled        6.x-3.1 
+ Messaging   Messaging (messaging)               Module  Enabled        6.x-2.4 
+ Messaging   Messaging Mime Mail                 Module  Not installed  6.x-2.4 
+             (messaging_mime_mail)                                              
+ Messaging   Messaging PHPMailer                 Module  Not installed  6.x-2.4 
+             (messaging_phpmailer)                                              
+ Messaging   Messaging Privatemsg                Module  Not installed  6.x-2.4 
+             (messaging_privatemsg)                                             
+ Messaging   Messaging XMPP (messaging_xmpp)     Module  Not installed  6.x-2.4 
+ Messaging   Simple Mail (messaging_mail)        Module  Enabled        6.x-2.4 
+ Messaging   Simple messaging                    Module  Enabled        6.x-2.4 
+             (messaging_simple)                                                 
+ Messaging   SMS Messaging (messaging_sms)       Module  Not installed  6.x-2.4 
+ Messaging   Twitter Messaging                   Module  Not installed  6.x-2.4 
+             (messaging_twitter)                                                
+ Node Form   CCK Form Settings                   Module  Enabled        6.x-2.0 
+ Settings    (cckformsettings)                                                  
+ Node Form   Comment Form Settings               Module  Enabled        6.x-2.0 
+ Settings    (commentformsettings)                                              
+ Node Form   Node Form Settings                  Module  Enabled        6.x-2.0 
+ Settings    (nodeformsettings)                                                 
+ Node Form   Node Form Settings Migration from   Module  Not installed  6.x-2.0 
+ Settings    6.x-1.x to 6.x-2.x (nfsmigrate)                                    
+ Notificati  Content Notifications               Module  Enabled        6.x-2.3 
+ ons         (notifications_content)                                            
+ Notificati  Notifications (notifications)       Module  Enabled        6.x-2.3 
+ ons                                                                            
+ Notificati  Notifications Autosubscribe         Module  Enabled        6.x-2.3 
+ ons         (notifications_autosubscribe)                                      
+ Notificati  Notifications Lite                  Module  Enabled        6.x-2.3 
+ ons         (notifications_lite)                                               
+ Notificati  Notifications UI                    Module  Enabled        6.x-2.3 
+ ons         (notifications_ui)                                                 
+ Notificati  Notifications Views                 Module  Enabled        6.x-2.3 
+ ons         (notifications_views)                                              
+ Notificati  Taxonomy Notifications              Module  Not installed  6.x-2.3 
+ ons         (notifications_tags)                                               
+ Organic     Organic groups (og)                 Module  Enabled        6.x-2.1 
+ groups                                                                         
+ Organic     Organic groups access control       Module  Enabled        6.x-2.1 
+ groups      (og_access)                                                        
+ Organic     Organic groups actions              Module  Not installed  6.x-2.1 
+ groups      (og_actions)                                                       
+ Organic     Organic groups aggregator           Module  Enabled        6.x-1.4 
+ groups      (og_aggregator)                                                    
+ Organic     Organic groups mandatory group      Module  Enabled        6.x-1.0 
+ groups      (og_mandatory_group)                                       -beta1  
+ Organic     Organic Groups Notifications        Module  Enabled        6.x-2.1 
+ groups      (og_notifications)                                                 
+ Organic     Organic groups statistics           Module  Enabled        6.x-1.0 
+ groups      (og_statistics)                                            -rc5    
+ Organic     Organic groups Views integration    Module  Enabled        6.x-2.1 
+ groups      (og_views)                                                         
+ Other       Advanced Form (advancedform)        Module  Enabled        6.x-1.4 
+ Other       Better Formats (better_formats)     Module  Enabled        6.x-1.2 
+ Other       Commons release (commons_release)   Module  Enabled        6.x-1.4 
+ Other       Diff (diff)                         Module  Enabled        6.x-2.1 
+ Other       Form Alter UI (form_alter_ui)       Module  Enabled        6.x-1.x 
+                                                                        -dev    
+ Other       getID3() (getid3)                   Module  Enabled        6.x-1.4 
+ Other       Insert (insert)                     Module  Enabled        6.x-1.0 
+ Other       Job Scheduler (job_scheduler)       Module  Enabled        6.x-1.0 
+                                                                        -beta3  
+ Other       LoginToboggan (logintoboggan)       Module  Enabled        6.x-1.9 
+ Other       LoginToboggan Rules Integration     Module  Not installed  6.x-1.9 
+             (logintoboggan_rules)                                              
+ Other       Mollom (mollom)                     Module  Not installed  6.x-1.1 
+                                                                        5       
+ Other       Node Form Settings Tests (nfstest)  Module  Not installed  6.x-2.0 
+ Other       One page profile (onepageprofile)   Module  Disabled       6.x-1.1 
+                                                                        1       
+ Other       Password change tab                 Module  Enabled        6.x-1.0 
+             (password_policy_password_tab)                             -beta1  
+ Other       Password policy (password_policy)   Module  Enabled        6.x-1.0 
+                                                                        -beta1  
+ Other       Pathauto (pathauto)                 Module  Enabled        6.x-1.5 
+ Other       Poormanscron (poormanscron)         Module  Enabled        6.x-1.1 
+ Other       Quant (quant)                       Module  Enabled        6.x-1.x 
+                                                                        -dev    
+ Other       Skinr (skinr)                       Module  Enabled        6.x-1.6 
+ Other       Strongarm (strongarm)               Module  Enabled        6.x-2.0 
+ Other       Taxonomy Super Select               Module  Enabled        6.x-1.4 
+             (taxonomy_super_select)                                            
+ Other       Token (token)                       Module  Enabled        6.x-1.1 
+                                                                        5       
+ Other       Token actions (token_actions)       Module  Not installed  6.x-1.1 
+                                                                        5       
+ Other       TokenSTARTER (tokenSTARTER)         Module  Not installed  6.x-1.1 
+                                                                        5       
+ Other       Transliteration (transliteration)   Module  Enabled        6.x-3.0 
+ Other       User badges (user_badges)           Module  Not installed  6.x-1.6 
+ Other       User Product Badges                 Module  Not installed  6.x-1.6 
+             (user_badges_products)                                             
+ Other       User Terms (user_terms)             Module  Enabled        6.x-1.0 
+ Other       Wikitools (wikitools)               Module  Enabled        6.x-1.2 
+ Panels      Mini panels (panels_mini)           Module  Not installed  6.x-3.9 
+ Panels      Panel nodes (panels_node)           Module  Not installed  6.x-3.9 
+ Panels      Panels (panels)                     Module  Enabled        6.x-3.9 
+ Panels      Panels In-Place Editor              Module  Enabled        6.x-3.9 
+             (panels_ipe)                                                       
+ Rules       Rules (rules)                       Module  Enabled        6.x-1.4 
+ Rules       Rules Administration UI             Module  Enabled        6.x-1.4 
+             (rules_admin)                                                      
+ Rules       Rules Forms support (rules_forms)   Module  Enabled        6.x-1.4 
+ Rules       Rules Scheduler (rules_scheduler)   Module  Not installed  6.x-1.4 
+ Rules       Rules Simpletest (rules_test)       Module  Not installed  6.x-1.4 
+ Shoutbox    Shoutbox (shoutbox)                 Module  Enabled        6.x-2.x 
+                                                                        -dev    
+ Shoutbox    Shoutbox group (shoutbox_group)     Module  Enabled        6.x-2.x 
+                                                                        -dev    
+ Shoutbox    Shoutbox points (shoutbox_points)   Module  Not installed  6.x-2.x 
+                                                                        -dev    
+ Shoutbox    Shoutbox tags (shoutbox_tags)       Module  Not installed  6.x-2.x 
+                                                                        -dev    
+ Shoutbox    Shoutbox user (shoutbox_user)       Module  Not installed  6.x-2.x 
+                                                                        -dev    
+ Taxonomy    Tagadelic (tagadelic)               Module  Enabled        6.x-1.2 
+ Taxonomy    Tagging AlchemyAPI suggestions      Module  Not installed  6.x-2.5 
+             (tagging_alchemy_suggest)                                          
+ Taxonomy    Tagging full-vocabular suggestion   Module  Not installed  6.x-2.5 
+             (tagging_vocab_suggest)                                            
+ Taxonomy    Tagging opencalais suggestions      Module  Not installed  6.x-2.5 
+             (tagging_opencalais_suggest)                                       
+ Taxonomy    Tagging vocab extractor             Module  Not installed  6.x-2.5 
+             suggestions                                                        
+             (tagging_vocab_extractor_suggest)                                  
+ Taxonomy    Taxonomy CSV import/export          Module  Enabled        6.x-5.6 
+             (taxonomy_csv)                                                     
+ Testing     Features Tests (features_test)      Module  Not installed  6.x-1.0 
+ User        Ajax Load (ajax_load)               Module  Enabled        6.x-1.x 
+ interface                                                              -dev    
+ User        Ajax load example                   Module  Not installed  6.x-1.x 
+ interface   (ajax_load_example)                                        -dev    
+ User        jQuery UI (jquery_ui)               Module  Enabled        6.x-1.4 
+ interface                                                                      
+ User        Vertical Tabs (vertical_tabs)       Module  Disabled       6.x-1.0 
+ interface                                                              -rc1    
+ User        Wysiwyg (wysiwyg)                   Module  Enabled        6.x-2.x 
+ interface                                                              -dev    
+ User        UR Migrate Buddylist2               Module  Not installed  6.x-1.0 
+ Relationsh  (user_relationship_migrate)                                        
+ ips                                                                            
+ User        UR-API (user_relationships_api)     Module  Enabled        6.x-1.0 
+ Relationsh                                                                     
+ ips                                                                            
+ User        UR-Blocks                           Module  Enabled        6.x-1.0 
+ Relationsh  (user_relationship_blocks)                                         
+ ips                                                                            
+ User        UR-Defaults                         Module  Not installed  6.x-1.0 
+ Relationsh  (user_relationship_defaults)                                       
+ ips                                                                            
+ User        UR-Elaborations                     Module  Enabled        6.x-1.0 
+ Relationsh  (user_relationship_elaborations)                                   
+ ips                                                                            
+ User        UR-Implications                     Module  Not installed  6.x-1.0 
+ Relationsh  (user_relationship_implications)                                   
+ ips                                                                            
+ User        UR-Invite                           Module  Not installed  6.x-1.0 
+ Relationsh  (user_relationship_invites)                                        
+ ips                                                                            
+ User        UR-Mailer                           Module  Enabled        6.x-1.0 
+ Relationsh  (user_relationship_mailer)                                         
+ ips                                                                            
+ User        UR-Node Access                      Module  Not installed  6.x-1.0 
+ Relationsh  (user_relationship_node_access)                                    
+ ips                                                                            
+ User        UR-Panels Visibility                Module  Not installed  6.x-1.0 
+ Relationsh  (user_relationships_panels_visibil                                 
+ ips         ity)                                                               
+ User        UR-Rules                            Module  Enabled        6.x-1.0 
+ Relationsh  (user_relationships_rules)                                         
+ ips                                                                            
+ User        UR-Services                         Module  Not installed  6.x-1.0 
+ Relationsh  (user_relationship_service)                                        
+ ips                                                                            
+ User        UR-UI (user_relationships_ui)       Module  Enabled        6.x-1.0 
+ Relationsh                                                                     
+ ips                                                                            
+ User        UR-Views (user_relationship_views)  Module  Enabled        6.x-1.0 
+ Relationsh                                                                     
+ ips                                                                            
+ Userpoints  Role exempt                         Module  Not installed  6.x-1.x 
+             (userpoints_role_exempt)                                   -dev    
+ Userpoints  User Points Flag (userpoints_flag)  Module  Not installed  6.x-1.x 
+                                                                        -dev    
+ Userpoints  User Points Node Limit              Module  Not installed  6.x-1.x 
+             (userpoints_nodelimit)                                     -dev    
+ Userpoints  User to User Points                 Module  Not installed  6.x-1.x 
+             (user2userpoints)                                          -dev    
+ Userpoints  Userpoints (userpoints)             Module  Not installed  6.x-1.2 
+ Userpoints  Userpoints Admin Email              Module  Not installed  6.x-1.x 
+             (userpoints_admin_email)                                   -dev    
+ Userpoints  Userpoints Badges                   Module  Not installed  6.x-1.x 
+             (userpoints_badges)                                        -dev    
+ Userpoints  Userpoints Cap (userpoints_cap)     Module  Not installed  6.x-1.x 
+                                                                        -dev    
+ Userpoints  Userpoints Comments per Type        Module  Not installed  6.x-1.x 
+             (userpoints_commentspertype)                               -dev    
+ Userpoints  Userpoints Download                 Module  Not installed  6.x-1.x 
+             (userpoints_download)                                      -dev    
+ Userpoints  Userpoints Invite                   Module  Not installed  6.x-1.x 
+             (userpoints_invite)                                        -dev    
+ Userpoints  Userpoints Modr8                    Module  Not installed  6.x-1.x 
+             (userpoints_modr8)                                         -dev    
+ Userpoints  Userpoints No Negative              Module  Not installed  6.x-1.x 
+             (userpoints_no_negative)                                   -dev    
+ Userpoints  Userpoints Nodes and Comments       Module  Not installed  6.x-1.1 
+             (userpoints_nc)                                                    
+ Userpoints  Userpoints Page Views               Module  Not installed  6.x-1.x 
+             (userpoints_pageviews)                                     -dev    
+ Userpoints  Userpoints Register                 Module  Not installed  6.x-1.x 
+             (userpoints_register)                                      -dev    
+ Userpoints  Userpoints Reset                    Module  Not installed  6.x-1.x 
+             (userpoints_reset)                                         -dev    
+ Userpoints  Userpoints Retroactive              Module  Not installed  6.x-1.x 
+             (userpoints_retroactive)                                   -dev    
+ Userpoints  Userpoints Revision                 Module  Not installed  6.x-1.x 
+             (userpoints_revision)                                      -dev    
+ Userpoints  Userpoints Role (userpoints_role)   Module  Not installed  6.x-1.x 
+                                                                        -dev    
+ Userpoints  Userpoints rules integration        Module  Not installed  6.x-1.2 
+             (userpoints_rules)                                                 
+ Userpoints  Userpoints Service                  Module  Not installed  6.x-1.2 
+             (userpoints_service)                                               
+ Userpoints  Userpoints User Picture             Module  Not installed  6.x-1.2 
+             (userpoints_user_picture)                                          
+ Userpoints  Votingpoints (votingpoints)         Module  Not installed  6.x-1.x 
+                                                                        -dev    
+ Views       Tagadelic Views (tagadelic_views)   Module  Enabled        6.x-1.2 
+ Views       Views (views)                       Module  Enabled        6.x-2.1 
+                                                                        2       
+ Views       Views Bulk Operations               Module  Enabled        6.x-1.1 
+             (views_bulk_operations)                                    0       
+ Views       Views exporter (views_export)       Module  Not installed  6.x-2.1 
+                                                                        2       
+ Views       Views UI (views_ui)                 Module  Enabled        6.x-2.1 
+                                                                        2       
+ Other       Acquia Commons (acquia_commons)     Theme   Enabled                
+ Other       Bluemarine (bluemarine)             Theme   Disabled       6.20    
+ Other       Chameleon (chameleon)               Theme   Disabled       6.20    
+ Other       Fusion Core (fusion_core)           Theme   Enabled        6.x-1.0 
+ Other       Garland (garland)                   Theme   Disabled       6.20    
+ Other       Marvin (marvin)                     Theme   Disabled       6.20    
+ Other       Minnelli (minnelli)                 Theme   Disabled       6.20    
+ Other       Pushbutton (pushbutton)             Theme   Disabled       6.20    
+
