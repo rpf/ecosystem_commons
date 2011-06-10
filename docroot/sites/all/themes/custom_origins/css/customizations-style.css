@@ -1,0 +1,17 @@
+/**
+ * This file contains customizations to the Commons Origins base theme.
+ */
+
+body #page {
+  background-image: none;
+}
+
+
+
+#view-id-aggregator_sources-page_1 .views-row {
+  margin-bottom: 25px;
+}
+  #view-id-aggregator_sources-page_1 .views-row .views-field-title {
+    font-size: 18px;
+    font-weight: bold;
+  }
